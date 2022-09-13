@@ -1,0 +1,45 @@
+Pseudo code:
+Algorithm - first
+1. Start.
+2. Instantiating a variable name highestMark with datatype Double.
+	Double highestMark = unitMarks.get(0);
+3. Similarly, instantiating another variable name lowestMark with datatype Double.
+	Double lowestMark = unitMarks.get(0);
+4. Using do-while loop for the iteration:
+	 do {
+            Double userMarks = sc.nextDouble();
+            if (userMarks > 0 && userMarks < 100) {
+                unitMarks.add(userMarks);
+            } else {
+                System.out.println("Please input the marks between 0 and 100");
+            }
+        } while (unitMarks.size() != 25);
+5. Iterating the value to get the highest and lowests marks using for loop ends after this.
+6. Displaying the highest and lowest marks obtained by students from their respective units.
+7. Stop.
+
+Algorithm - second
+1. Start.
+2. Instantiating a variable named calculate with double value 0.0.
+	Double calculate = 0.0;
+3. Using for loop for the iteration:
+	for (int i=0; i < unitMarks.size(); i ++) {
+            calculate += unitMarks.get(i);
+        }
+4. Writing the logic of mean.
+	        double meanCalculate = calculate / unitMarks.size();
+5. Displaying the calculated mean.
+6. Instantiating a variable summationstd of datatype double.
+	        double summationStd = 0.0;
+7. Using for loop for iterating over unit marks to get the value which is the product of (unitmarks obtained subtracted with the calculated mean above).
+	 for (int i = 0; i < unitMarks.size(); i++) {    
+            double someValue = Math.pow((unitMarks.get(i) - meanCalculate), 2);
+            summationStd += someValue;
+        }
+8. Now, again using various different logic as per the formula of standard deviation.
+	int divisorValue = unitMarks.size() - 1;             
+        double someValue = summationStd / divisorValue;
+        double stDeviation = Math.pow(someValue, 0.5);
+
+9. Finally, displaying the standard deviation.
+10. Stop.
